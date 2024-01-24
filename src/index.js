@@ -26,6 +26,7 @@ import "assets/demo/demo.css";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
 
 import AdminLayout from "layouts/Admin.js";
+import AuthLayout from "layouts/Auth";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -33,7 +34,8 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/admin/*" element={<AdminLayout />} />
-      <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
+      <Route path="/auth/*" element={<AuthLayout />} />
+      <Route path="/" element={<Navigate to="/auth/login" replace />} />
     </Routes>
   </BrowserRouter>
 );
